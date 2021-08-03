@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WheelProgressView">
+        <attr name="wheelProgressColor" format="color"/>
+        <attr name="wheelSecondaryColor" format="color"/>
+        <attr name="wheelThickness" format="dimension"/>
+        <attr name="centerDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MUIToolbar">
+        <!--返回图标-->
+        <attr name="tb_back_img" format="reference" />
+        <!--返回按按钮是否显示-->
+        <attr name="tb_back_visible" format="reference|boolean" />
+        <!--标题内容-->
+        <attr name="tb_title" format="reference|string" />
+        <!--标题字体大小-->
+        <attr name="tb_title_text_size" format="reference|dimension" />
+        <!--标题字体颜色-->
+        <attr name="tb_title_text_color" format="reference|color" />
+        <!--标题上右图标 其他方向如果有需求 再进行扩招-->
+        <attr name="tb_title_drawable_end_img" format="reference" />
+        <!--title是否是单行显示-->
+        <attr name="tb_title_single" format="reference|boolean" />
+        <!--右上角按钮 内容-->
+        <attr name="tb_right_text" format="reference|string" />
+        <!--右上角按钮 字体大小-->
+        <attr name="tb_right_text_size" format="reference|dimension" />
+        <!--右上角按钮字体颜色-->
+        <attr name="tb_right_text_color" format="reference|color" />
+        <!--右上角按钮图标 目前跟text用同一个-->
+        <attr name="tb_right_text_drawableend" format="reference" />
+        <!--右上角按钮是否可用 -->
+        <attr name="tb_right_text_enable" format="reference|boolean" />
+        <!--背景颜色-->
+        <attr name="tb_background_color" format="reference|color" />
+    </declare-styleable>
+
+    <!--切换按钮的参数属性定义-->
+    <declare-styleable name="MUISwitchButton">
+        <!--阴影半径-->
+        <attr name="sb_shadow_radius" format="reference|dimension" />
+        <!--阴影偏移-->
+        <attr name="sb_shadow_offset" format="reference|dimension" />
+        <!--阴影颜色-->
+        <attr name="sb_shadow_color" format="reference|color" />
+        <!--关闭颜色-->
+        <attr name="sb_uncheck_color" format="reference|color" />
+        <!--开启颜色-->
+        <attr name="sb_checked_color" format="reference|color" />
+        <!--边框宽度-->
+        <attr name="sb_border_width" format="reference|dimension" />
+        <!--开启指示器颜色-->
+        <attr name="sb_checkline_color" format="reference|color" />
+        <!--开启指示器线宽-->
+        <attr name="sb_checkline_width" format="reference|dimension" />
+        <!--关闭指示器颜色-->
+        <attr name="sb_uncheckcircle_color" format="reference|color" />
+        <!--关闭指示器线宽-->
+        <attr name="sb_uncheckcircle_width" format="reference|dimension" />
+        <!--关闭指示器半径-->
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension" />
+        <!--是否选中-->
+        <attr name="sb_checked" format="reference|boolean" />
+        <!--是否启用阴影-->
+        <attr name="sb_shadow_effect" format="reference|boolean" />
+        <!--动画时间，默认300ms-->
+        <attr name="sb_effect_duration" format="reference|integer" />
+        <!--按钮颜色-->
+        <attr name="sb_button_color" format="reference|color" />
+        <!--是否显示指示器，默认true：显示-->
+        <attr name="sb_show_indicator" format="reference|boolean" />
+        <!--背景色，默认白色-->
+        <attr name="sb_background" format="reference|color" />
+        <!--是否启用特效，默认true-->
+        <attr name="sb_enable_effect" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="InputText">
+        <attr name="rightDrawable" format="reference" />
+        <attr name="rightDrawablePW" format="reference" />
+        <attr name="drawableType">
+            <!--区别于enum  enum只能选择一个  flag可以多选 如：left|top-->
+            <enum name="clear" value="0" />
+            <enum name="visible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--地图搜索列表 抽屉效果-->
+    <declare-styleable name="ScrollLayout">
+        <attr name="minOffset" format="dimension" />
+        <attr name="maxOffset" format="dimension" />
+        <attr name="exitOffset" format="dimension" />
+        <attr name="mode">
+            <flag name="open" value="0x0" />
+            <flag name="close" value="0x1" />
+            <flag name="exit" value="0x2" />
+        </attr>
+        <attr name="allowHorizontalScroll" format="boolean" />
+        <attr name="isSupportExit" format="boolean" />
+        <attr name="limitHeight" format="boolean" />
+        <attr name="cutTopHeight" format="reference|dimension" />
+    </declare-styleable>
+    <!--搜索框-->
+    <declare-styleable name="SearchTextView">
+        <attr name="stv_input_able" format="boolean|reference" />
+        <!--是否使用阴影-->
+        <attr name="stv_evelation_able" format="boolean|reference" />
+    </declare-styleable>
+    <!--搜索框-->
+    <declare-styleable name="SearchEditText">
+        <attr name="stv_text" format="string|reference" />
+        <!--左侧图标resID-->
+        <attr name="stv_left_icon" format="reference" />
+        <attr name="stv_left_layout_width" format="dimension" />
+        <attr name="stv_left_layout_height" format="dimension" />
+        <!--右侧返回icon 是否显示-->
+        <attr name="stv_left_icon_visible" format="boolean|reference" />
+        <!--右侧图标resID-->
+        <attr name="stv_right_icon" format="reference" />
+        <!--右侧头像是否显示-->
+        <attr name="stv_right_headicon_visible" format="boolean" />
+        <!--提示内容-->
+        <attr name="stv_hint" format="reference|string" />
+        <!--提示内容字体颜色-->
+        <attr name="stv_hint_text_color" format="color" />
+        <attr name="stv_text_size" format="dimension" />
+        <attr name="stv_text_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="Skinable">
+        <!--TODO: isSupport=true标识当前控件支持换肤-->
+        <attr name="isSupport" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <!-- 描边宽度-->
+        <attr name="border_width" format="dimension"/>
+        <!-- 描边颜色-->
+        <attr name="border_color" format="color"/>
+        <!--圆角大小-->
+        <attr name="corner_radius" format="dimension"/>
+        <!--左上圆角大小-->
+        <attr name="leftTop_corner_radius" format="dimension"/>
+        <!--右上圆角大小-->
+        <attr name="rightTop_corner_radius" format="dimension"/>
+        <!--左下圆角大小-->
+        <attr name="leftBottom_corner_radius" format="dimension"/>
+        <!--右下圆角大小-->
+        <attr name="rightBottom_corner_radius" format="dimension"/>
+        <!--图片类型：圆角或者圆形-->
+        <attr name="type" format="enum">
+            <!--圆形-->
+            <enum name="oval" value="2"/>
+            <!--圆角-->
+            <enum name="round" value="1"/>
+            <!--环形-->
+            <enum name="circle" value="0"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="HandyRoundImageView">
+        <attr name="hriv_radius" format="dimension|reference" />
+        <attr name="topLeftRadiusable" format="boolean" />
+        <attr name="topRightRadiusable" format="boolean" />
+        <attr name="bottomLeftRadiusable" format="boolean" />
+        <attr name="bottomRightRadiusable" format="boolean" />
+        <!-- 增加一个设置 图片 内部填充颜色 的属性 默认是 白色 0xffffffff-->
+        <attr name="hriv_backgroundcolor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarCompat">
+        <attr format="color" name="StatusBarBg"/>
+        <attr format="boolean" name="StatusBarView"/>
+    </declare-styleable>
+</resources>

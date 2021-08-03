@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mbase_setting" translatable="false">Setting</string>
+    <string name="btn_login_text" translatable="false">Confirm</string>
+    <string name="btn_login" translatable="false">Login</string>
+    <string name="come_soon" translatable="false">come soon</string>
+    <string name="search_here" translatable="false">Search here</string>
+    <string name="mbase_search_hint" translatable="false">Enter search content</string>
+    <string name="success" translatable="false">Success</string>
+    <string name="failed" translatable="false">Failure</string>
+    <string name="base_cancel" translatable="false">Cancel</string>
+    <string name="delete" translatable="false">Delete</string>
+    <string name="start" translatable="false">Start</string>
+    <string name="end" translatable="false">End</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="closed" translatable="false">Closed</string>
+    <string name="AR" translatable="false">AR</string>
+    <string name="base_ok" translatable="false">OK</string>
+    <string name="or" translatable="false">OR</string>
+    <string name="finish" translatable="false">Finish</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="saved" translatable="false">Saved</string>
+    <string name="call" translatable="false">Call</string>
+    <string name="way" translatable="false">Directions</string>
+    <string name="expand" translatable="false">Expand</string>
+    <string name="more" translatable="false">More</string>
+    <string name="read_more" translatable="false">See more</string>
+    <string name="load_more" translatable="false">Load more</string>
+    <string name="not_more" translatable="false">Not more</string>
+    <string name="map_type" translatable="false">Map type</string>
+    <string name="map_detail" translatable="false">Map details</string>
+    <string name="map_type_default" translatable="false">Default</string>
+    <string name="map_type_satellite" translatable="false">Satellite</string>
+    <string name="map_type_landform" translatable="false">Landform</string>
+    <string name="map_type_bus" translatable="false">Bus</string>
+    <string name="map_type_real" translatable="false">Real-time traffic</string>
+    <string name="map_type_bike" translatable="false">Cycling route</string>
+    <string name="map_type_3d" translatable="false">3D Mesh</string>
+    <string name="map_type_street" translatable="false">StreetView</string>
+    <string name="not_find" translatable="false">Could not find</string>
+    <string name="speak_slowly" translatable="false">speak slowly</string>
+    <string name="no_phone_number" translatable="false">No phone number</string>
+    <string name="try_again" translatable="false">Please try again</string>
+    <string name="mbase_search" translatable="false">Search</string>
+    <string name="mbase_loading" translatable="false">Loading…</string>
+    <string name="mbase_hint_describe_your_question" translatable="false">Please describe your question</string>
+    <string name="mbase_help_improve" translatable="false">Help to improve</string>
+    <string name="appraisal" translatable="false">Appriasal</string>
+    <string name="menu" translatable="false">Menu</string>
+    <string name="aed_price" translatable="false">AED:$s</string>
+    <string name="rest" translatable="false">rest</string>
+    <string name="open" translatable="false">open</string>
+    <string name="week_sun" translatable="false">Sun.</string>
+    <string name="week_mon" translatable="false">Mon.</string>
+    <string name="week_tue" translatable="false">Tue.</string>
+    <string name="week_wed" translatable="false">Wed.</string>
+    <string name="week_thu" translatable="false">Thur.</string>
+    <string name="week_fri" translatable="false">Fri.</string>
+    <string name="week_sta" translatable="false">Sta.</string>
+    <string name="not_log_in" translatable="false">Not logged in</string>
+    <string name="choose_picture" translatable="false">Choose picture</string>
+    <string name="picture_max_notify" translatable="false">Select up to %1$d images</string>
+    <string name="recommend_pictures" translatable="false">Recommend pictures</string>
+    <string name="more_pictures" translatable="false">More pictures</string>
+    <string name="file_err" translatable="false">file err</string>
+    <string name="navigation_continue_notify" translatable="false">GoMap keeps navigating for you</string>
+    <string name="uni_url_null_notify" translatable="false">It may be due to weak signal, network instability and other reasons, please try again later.</string>
+    <string name="video_select_toast" translatable="false">You can only select a video file</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="delete_success" translatable="false">Delete success</string>
+    <string name="delete_associated_address" translatable="false">Delete the associated address first</string>
+    <string name="favorites" translatable="false">Favorites</string>
+    <string name="want_to_go" translatable="false">Want to go</string>
+    <string name="starred_places" translatable="false">Starred Places</string>
+    <string name="mine" translatable="false">Mine</string>
+
+    <string name="system_message" translatable="false">System Announcement</string>
+    <string name="my_message" translatable="false">My message</string>
+    <string name="exciting_events" translatable="false">Exciting events</string>
+    <string name="refresh_msg" translatable="false">Refreshed</string>
+
+    <string name="enter_working_address" translatable="false">Enter working address</string>
+    <string name="enter_home_address" translatable="false">Enter home address</string>
+
+    <string name="refreshing" translatable="false">Update</string>
+    <string name="refresh_fail" translatable="false">Update fail</string>
+
+    <string name="refresh_end" translatable="false">Update complete</string>
+    <string name="refresh_last" translatable="false">M-d HH:mm</string>
+    <string name="nothing_msg" translatable="false">Nothing</string>
+    <string name="set_name" translatable="false">No nickname，please set</string>
+
+    <string name="search_empty_title" translatable="false">No results found on the GoMap</string>
+    <string name="update_remind" translatable="false">Update</string>
+    <string name="next_time" translatable="false">No</string>
+    <string name="update_now" translatable="false">Update Now</string>
+    <string name="updating_progress" translatable="false">Updating, Download %1$d%%</string>
+    <string name="download_complete" translatable="false">Download complete</string>
+    <string name="install" translatable="false">Install</string>
+    <string name="download_failed" translatable="false">Download failed</string>
+
+    <string name="code_lock_1_hour" translatable="false">"Too many attempts account lock 1 hour"</string>
+    <string name="code_lock_24_hour" translatable="false">"Too many attempts account lock 24 hour"</string>
+    <string name="system_error" translatable="false">System error</string>
+    <string name="unknown_error" translatable="false">Unknown error</string>
+    <string name="load_all" translatable="false">Load all</string>
+    <string name="load_progress" translatable="false">loading…</string>
+    <string name="existed" translatable="false">existed</string>
+    <string name="address_existed" translatable="false">Address existed</string>
+    <string name="title_existed" translatable="false">Title existed</string>
+    <string name="search_result_empty" translatable="false">No results found on the GoMap</string>
+    <string name="nav_start_dest_close" translatable="false">The starting point is close to the destination. </string>
+    <string name="mbase_unset" translatable="false">Is not set</string>
+    <string name="list_type_private" translatable="false">Private</string>
+    <string name="list_type_shared" translatable="false">Shared</string>
+    <string name="list_type_public" translatable="false">Public</string>
+    <string name="address_account" translatable="false">%1$d places</string>
+    <string name="poi_fail" translatable="false">Detail not found</string>
+    <string name="network_error" translatable="false">network not connected, please check</string>
+    <string name="mbase_loading_failure" translatable="false">Loading Failure</string>
+    <string name="mbase_reload" translatable="false">Reload</string>
+
+    <string name="find_psd_submit_modify" translatable="false">Submit</string>
+</resources>

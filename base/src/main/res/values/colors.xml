@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Appbar背景色 6200EE-->
+    <color name="colorPrimary">@android:color/transparent</color>
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#1779FF</color>
+    <!--控制各个控件被选中时的颜色-->
+    <color name="colorAccent">#1779FF</color>
+    <!--页面背景色-->
+    <color name="windowBackground">@android:color/white</color>
+    <!--底部导航栏颜色-->
+    <color name="navigationBarColor">@android:color/black</color>
+    <!--ToolBar上的Title颜色-->
+    <color name="textColorPrimary">@android:color/black</color>
+    <!--各个控制控件的默认颜色-->
+    <color name="color_gray_FF7F8996">#FF7F8996</color>
+    <color name="color_gray_337F8996">#337F8996</color>
+    <color name="color_theme_blue">#1779FF</color>
+    <color name="color_theme_green">#00A75D</color>
+    <color name="color_theme">#00A75D</color>
+    <color name="color_theme_50">#6600A75D</color>
+    <color name="color_black">#000000</color>
+    <color name="color_black_1D1A1A">#1D1A1A</color>
+    <color name="light_transparent">#16000000</color>
+    <color name="shimmer_color_for_image">#ffd9d9d9</color>
+
+    <color name="color_E1E1E1">#e1e1e1</color>
+
+    <color name="color_ff00d396">#00D396</color>
+    <color name="color_fffbe562">#FBE562</color>
+    <color name="color_white">#ffFFFFFF</color>
+    <color name="color_ffececec">#ECECEC</color>
+    <color name="color_ff7f8996">#7F8996</color>
+    <color name="color_ffb3bac3">#B3BAC3</color>
+    <color name="color_ff203152">#203152</color>
+    <color name="color_ff363636">#363636</color>
+    <color name="color_ffd9d9d9">#FFD9D9D9</color>
+    <color name="color_fff5f4f9">#FFf5f4f9</color>
+    <color name="color_4f4f4f">#4F4F4F</color>
+    <color name="color_8c8c8c">#8C8C8C</color>
+    <color name="color_00a75d">#00A75D</color>
+    <color name="color_05A860">#05A860</color>
+    <color name="color_05A85C">#05A85C</color>
+    <color name="color_c4ebda">#C4EBDA</color>
+    <color name="color_aa00a75d">#1900A75D</color>
+    <color name="color_d3d3d3">#D3D3D3</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_979797">#979797</color>
+    <color name="color_242424">#242424</color>
+    <color name="color_434343">#434343</color>
+    <color name="color_dbdbdb">#DBDBDB</color>
+    <color name="color_f1f1f1">#F1F1F1</color>
+
+    <color name="color_ff3c3f44">#3C3F44</color>
+    <color name="color_ffeaeaea">#eaeaea</color>
+    <color name="color_803c3f44">#CC3C3F44</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_33B5E5">#33B5E5</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+
+    <color name="white">#fff</color>
+    <color name="color_ff454344">#ff454344</color>
+    <color name="color_ffdcdcdc">#DCDCDC</color>
+    <color name="color_50dcdcdc">#66DCDCDC</color>
+    <color name="color_ff000000">#000</color>
+    <color name="color_60000000">#99000000</color>
+    <color name="color_45000000">#72000000</color>
+    <color name="div_gray">#b3bac3</color>
+    <color name="btn_left_color">#1A112E</color>
+    <color name="week_day_color">#334BC38B</color>
+    <color name="color_ff1c8b5a">#FF1C8B5A</color>
+    <color name="color_fffc4e52">#FFFC4E52</color>
+    <color name="color_ffF2522B">#FFF2522B</color>
+    <color name="color_ffededed">#FFededed</color>
+    <color name="color_red_FC4E52_20">#33FC4E52</color>
+    <color name="color_white_4">#0AFFFFFF</color> <!-- 4% white -->
+    <color name="color_white_8">#14FFFFFF</color> <!-- 8% white -->
+    <color name="color_white_11">#1CFFFFFF</color> <!-- 11% white -->
+    <color name="color_white_12">#1EFFFFFF</color> <!-- 12% white -->
+    <color name="color_white_16">#29FFFFFF</color> <!-- 16% white -->
+    <color name="color_white_20">#33FFFFFF</color> <!-- 20% white -->
+    <color name="color_white_24">#3DFFFFFF</color> <!-- 24% white -->
+    <color name="color_white_38">#61FFFFFF</color>  <!-- 38% white -->
+    <color name="color_white_40">#66FFFFFF</color>  <!-- 40% white -->
+    <color name="color_white_54">#8AFFFFFF</color> <!-- 54% black -->
+    <color name="color_white_60">#99FFFFFF</color> <!-- 60% white -->
+
+
+    <color name="color_black_4">#0A000000</color> <!-- 4% black -->
+    <color name="color_black_5">#1A000000</color> <!-- 5% black -->
+    <color name="color_black_8">#14000000</color> <!-- 8% black -->
+    <color name="color_black_10">#19000000</color> <!-- 10% black -->
+    <color name="color_black_11">#1C000000</color> <!-- 11% black -->
+    <color name="color_black_12">#1E000000</color> <!-- 12% black -->
+    <color name="color_black_16">#29000000</color> <!-- 16% black -->
+    <color name="color_black_20">#33000000</color> <!-- 20% black -->
+    <color name="color_black_24">#3D000000</color> <!-- 24% black -->
+    <color name="color_black_30">#4C000000</color>  <!-- 38% black -->
+    <color name="color_black_38">#61000000</color>  <!-- 38% black -->
+    <color name="color_black_40">#66000000</color>  <!-- 40% black -->
+    <color name="color_black_54">#8A000000</color> <!-- 54% black -->
+    <color name="color_black_50">#88000000</color> <!-- 50% black -->
+    <color name="color_black_60">#99000000</color> <!-- 60% black -->
+    <color name="color_black_70">#B3000000</color> <!-- 70% black -->
+    <color name="color_black_80">#CC000000</color> <!-- 80% black -->
+    <color name="color_black_90">#E6000000</color> <!-- 90% white -->
+
+
+    <color name="color_f0f0f0">#F0F0F0</color>
+    <color name="color_e7e9eb">#e7E9EB</color>
+    <color name="color_99dfcf">#99DFCF</color>
+
+    <color name="color_ffbdbdbd">#BDBDBD</color>
+    <color name="color_ff470d">#FF470D</color>
+    <color name="color_f6f6f6">#F6F6F6</color>
+    <color name="color_FF7400">#FF7400</color>
+    <color name="color_FFA85C">#FFA85C</color>
+    <color name="color_FFACDEC8">#ACDEC8</color>
+    <color name="color_5E5E5E">#5E5E5E</color>
+</resources>

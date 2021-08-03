@@ -1,0 +1,9 @@
+include ':sdkdemo'
+include ':tangram_map'
+include ':viewrouter-compiler'
+include ':base_module'
+include ':viewrouter-annotation'
+include ':base'
+include ':viewrouter-api'
+include ':app'
+rootProject.name = "GomapDemo"

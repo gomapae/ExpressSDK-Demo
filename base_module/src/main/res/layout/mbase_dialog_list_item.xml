@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_21"
+        android:paddingEnd="@dimen/dp_21">
+        <!--    android:drawableEnd="@mipmap/mbase_icon_arrow_right_gray"-->
+    </TextView>
+</layout>

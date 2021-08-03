@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aes_bk" translatable="false">52e9</string>
+    <string name="digits_phone" translatable="false">0123456789-</string>
+</resources>

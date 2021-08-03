@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="minute" translatable="false">min</string>
+    <string name="hour" translatable="false">h</string>
+    <string name="unknonwn_place" translatable="false">Unknown Place</string>
+    <string name="start_from_my_location" translatable="false">Start from my location</string>
+    <string name="destination_propmt" translatable="false">Destination is on your %s</string>
+    <string name="left" translatable="false">left</string>
+    <string name="right" translatable="false">right</string>
+    <string name="front" translatable="false">front</string>
+</resources>

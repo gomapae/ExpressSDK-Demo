@@ -1,0 +1,82 @@
+ext {
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: '29.0.3',
+            applicationId    : "com.gomap.android.demo",
+            minSdkVersion    : 23,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+    ]
+
+    arouterApi = "1.5.0"
+    arouterCompiler = "1.2.2"
+    rxLifecycleVersion = "2.2.1"
+    loggingInterceptorVersion = '2.0.7'
+    smartRefreshLayoutVersion = '1.0.5.1'
+    refreshlayoutkernelVersion = '2.0.1'
+    refreshheadermaterialVersion = '2.0.1'
+
+    ktxVersion = "1.2.0"
+    kotlinxCoroutinesCoreVersion = "1.2.1"
+    kotlinxCoroutinesAndroidVersion = "1.1.1"
+
+    appcompatVersion = "1.1.0"
+
+    materialVersion = "1.1.0"
+    navigationfragmentVersion = "2.0.0-rc02"
+    legacysupportV4Version = "1.0.0"
+    constraintlayoutVersion = "1.1.3"
+    lifecycleextensionsVersion = "2.2.0"
+    lifecycleviewmodelktxVersion = "2.2.0"
+    fragmentVersion = "1.2.4"
+
+    gsonVersion = "2.8.6"
+
+    rxandroidVersion = "2.1.1"
+    rxjavaVersion = "2.2.19"
+    rxpermissionsVersion = "0.10.2"
+    rxbindingVersion = "2.1.1"
+
+    blankjutilcodexVersion = "1.28.0"
+
+    def libVersion = [
+            support          : "1.1.0"
+    ]
+    kotlinDependencies = [
+            kotlinStdlib              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            ktx                       : "androidx.core:core-ktx:${ktxVersion}",
+            kotlinxCoroutinesCore     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinxCoroutinesCoreVersion}",
+            kotlinxCoroutinesAndroid   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinxCoroutinesAndroidVersion}"
+    ]
+    dependencies = [
+
+            "appcompat-v7"              : "androidx.appcompat:appcompat:${libVersion.support}",
+            appcompat            : "androidx.appcompat:appcompat:${appcompatVersion}",
+            material            : "com.google.android.material:material:${materialVersion}",
+            navigationfragment            : "androidx.navigation:navigation-fragment:${navigationfragmentVersion}",
+            navigationui            : "androidx.navigation:navigation-ui:${navigationfragmentVersion}",
+            legacysupportV4           : "androidx.legacy:legacy-support-v4:${legacysupportV4Version}",
+            constraintlayout           : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
+            lifecycleextensions           : "androidx.lifecycle:lifecycle-extensions:${lifecycleextensionsVersion}",
+            lifecycleviewmodelktx          : "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleviewmodelktxVersion}",
+            fragment          : "androidx.fragment:fragment:${fragmentVersion}",
+
+            arouterApi: "com.alibaba:arouter-api:${arouterApi}",
+            aroutercompiler: "com.alibaba:arouter-compiler:${arouterCompiler}",
+
+            rxandroid : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
+            rxjava : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+            rxlifecycle               : "com.trello.rxlifecycle2:rxlifecycle:${rxLifecycleVersion}",
+            rxlifecycle_android       : "com.trello.rxlifecycle2:rxlifecycle-android:${rxLifecycleVersion}",
+            rxlifecycle_kotlin        : "com.trello.rxlifecycle2:rxlifecycle-kotlin:${rxLifecycleVersion}",
+            rxlifecycle_android_kotlin: "com.trello.rxlifecycle2:rxlifecycle-android-lifecycle-kotlin:${rxLifecycleVersion}",
+            rxpermissions: "com.github.tbruyelle:rxpermissions:${rxpermissionsVersion}",
+            rxbinding: "com.jakewharton.rxbinding2:rxbinding:${rxbindingVersion}",
+
+            gson : "com.google.code.gson:gson:${gsonVersion}",
+
+            blankjutilcodex          : "com.blankj:utilcodex:${blankjutilcodexVersion}"
+
+    ]
+}

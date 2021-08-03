@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="BaseThemeGoMap" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--Appbar背景色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--页面背景色-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--底部导航栏颜色-->
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <!--ToolBar上的Title颜色-->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!--各个控制控件的默认颜色-->
+        <item name="android:colorControlNormal">@color/color_gray_FF7F8996</item>
+        <!--状态栏透明-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.GoMap" parent="BaseThemeGoMap" />
+
+    <style name="Theme.GoMap.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>-->
+    <style name="Theme_Splash" parent="BaseThemeGoMap">
+        <item name="android:windowBackground">@drawable/splash_lanucher</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme_MainActivity" parent="Theme.GoMap.NoActionBar">
+        <!--  <item name="android:windowIsTranslucent">true</item>-->
+        <!--   <item name="android:windowBackground">@drawable/base_splash_theme_bg</item>-->
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <declare-styleable name="HandyEmojiEdittext">
+        <attr name="emojiFilterable" format="boolean|reference" />
+        <attr name="filterSpace" format="boolean|reference" />
+        <attr name="inputLength" format="integer|reference" />
+        <attr name="inputTypeEnum">
+            <flag name="none" value="0x00" /><!--0000 0000-->
+            <flag name="en" value="0x01" /><!--0000 0001-->
+            <flag name="zh" value="0x02" /><!--0000 0010-->
+            <flag name="num" value="0x04" /><!--0000 0100-->
+        </attr>
+        <attr name="maxNum" format="integer|reference" />
+    </declare-styleable>
+
+    <!--星状评分控件-->
+    <declare-styleable name="RatingBar">
+        <!--未选中-->
+        <attr name="starEmptyRes" format="reference" />
+        <!--选中半个-->
+        <attr name="starHalfRes" format="reference" />
+        <!--选中全部-->
+        <attr name="starSelectedRes" format="reference" />
+        <!--星星的总数-->
+        <attr name="startTotalNumber" format="integer" />
+        <!--默认选中的数量 -->
+        <attr name="selectedNumber" format="float" />
+        <!--星星的间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星的宽度-->
+        <attr name="starWidth" format="dimension" />
+        <!--星星的高度-->
+        <attr name="starHeight" format="dimension" />
+        <!--是不是只画整个星星，不画半个-->
+        <attr name="starIsFull" format="boolean" />
+    </declare-styleable>
+
+    <!--加载中dialog-->
+    <style name="HandyLoadingStyle" parent="@android:style/Theme.Dialog">
+        <!--无边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--设置背景 #4A000000 -->
+        <item name="android:background">@android:color/transparent</item>
+        <!--显示区域是否透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--显示区域以外是否使用半透明背景 false-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--遮罩层-->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+    <style name="mbase_anim_pop">
+        <item name="android:windowEnterAnimation">@anim/mbase_pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/mbase_pop_out</item>
+    </style>
+
+    <!--底部弹窗样式-->
+    <style name="BottomDialogStyle" parent="android:Animation">
+        <item name="android:dialogPreferredPadding">0dp</item>
+        <item name="android:windowBackground">#203152</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <!--网络加载弹窗样式-->
+    <style name="MyDialogStyle" parent="android:Animation">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="UpgradeDialog"  parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--弹窗动画-->
+    <style name="mystyle" parent="android:Animation">
+        <!--//进入时的动画-->
+        <item name="android:windowEnterAnimation">@anim/mbase_pop_enter</item>
+        <!--//退出时的动画-->
+        <item name="android:windowExitAnimation">@anim/mbase_pop_out</item>
+    </style>
+
+    <!--网络加载自定义动画View-->
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">48dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">48dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+        <item name="indicatorColor">#D3D3D3</item>
+    </style>
+
+    <declare-styleable name="labels_view">
+        <attr name="selectType" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="SINGLE" value="2" />
+            <enum name="SINGLE_IRREVOCABLY" value="3" />
+            <enum name="MULTI" value="4" />
+        </attr>
+        <attr name="maxSelect" format="integer" />
+        <attr name="maxLines" format="integer" />
+        <attr name="labelTextColor" format="reference|color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextPaddingLeft" format="dimension" />
+        <attr name="labelTextPaddingTop" format="dimension" />
+        <attr name="labelTextPaddingRight" format="dimension" />
+        <attr name="labelTextPaddingBottom" format="dimension" />
+        <attr name="lineMargin" format="dimension" />
+        <attr name="wordMargin" format="dimension" />
+        <attr name="labelBackground" format="reference|color" />
+    </declare-styleable>
+
+    <string name="polite_invitation">Polite invitation</string>
+
+</resources>
