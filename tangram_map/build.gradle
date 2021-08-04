@@ -58,6 +58,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api project(path: ':base_module')
-    implementation 'com.gomap.android:express:1.0.0'
+    api 'com.gomap.android:express:1.0.0'
 
 }
