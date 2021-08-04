@@ -21,6 +21,12 @@ allprojects {
 }
 ```
 
+地图依赖：
+
+```fortran
+implementation 'com.gomap.android:express:1.0.0'
+```
+
 2.手机权限
 
 ```fortran
