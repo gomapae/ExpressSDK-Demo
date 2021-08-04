@@ -5,9 +5,7 @@ import com.gomap.maps.demo.R
 import com.gomap.maps.demo.databinding.AddMarkerViewBinding
 import com.gomap.maps.demo.map.GoMapUtils
 import com.mapzen.android.graphics.model.BitmapMarker
-import com.viewrouter.annotation.ViewRoute
 import com.wendjia.base.bean.SearchBean
-import com.wendjia.base.utils.JsonUtils
 import com.wendjia.base.view.IBaseView
 import com.wendjia.base.viewbinding.BaseMVVMView
 import com.wendjia.base.viewbinding.BaseViewModel
@@ -16,7 +14,6 @@ import com.wendjia.base.viewbinding.BaseViewModel
  * @author lxm
  * @createtime 2021/8/3
  */
-@ViewRoute(path = "AddMaker",group = "sdkdemo")
 class AddMakerView(var iBaseViewOwner: IBaseView): BaseMVVMView<AddMarkerViewBinding, BaseViewModel>(iBaseViewOwner.getContext()),AddMakerViewListener{
 
     override fun initData() {

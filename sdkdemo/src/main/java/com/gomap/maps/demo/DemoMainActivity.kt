@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.blankj.utilcode.util.ToastUtils
+import com.gomap.maps.demo.addmaker.AddMakerView
 import com.gomap.maps.demo.databinding.ActivityMainBinding
 import com.gomap.maps.demo.map.MapCallBack
+import com.gomap.maps.demo.routing.RoutingView
+import com.gomap.maps.demo.selectpoint.SelectPointView
 import com.mapzen.android.rge.TravelData
-import com.viewrouter.api.ViewRouter
 import com.wendjia.base.bean.SearchBean
 import com.wendjia.base.utils.JsonUtils
 import com.wendjia.base.viewbinding.BaseActivity
@@ -37,21 +39,18 @@ class DemoMainActivity : BaseActivity<ActivityMainBinding, DemoMainViewModel>(),
             }
         })
         binding.activityMainBtnRouting.setOnClickListener {
-            val navigation = ViewRouter.buildPath(this, "RoutingView")
-                ?.navigation()
-            ViewTaskManager.getInstance().startView(navigation, true)
+            val routingView = RoutingView(this)
+            ViewTaskManager.getInstance().startView(routingView, true)
         }
 
         binding.activityMainBtnAddMarker.setOnClickListener {
-            val navigation = ViewRouter.buildPath(this, "AddMaker")
-                ?.navigation()
-            ViewTaskManager.getInstance().startView(navigation, true)
+            val addMakerView = AddMakerView(this)
+            ViewTaskManager.getInstance().startView(addMakerView, true)
         }
 
         binding.activityMainBtnSelectPoint.setOnClickListener {
-            val navigation = ViewRouter.buildPath(this, "SelectPointView")
-                ?.navigation()
-            ViewTaskManager.getInstance().startView(navigation, true)
+            val selectPointView = SelectPointView(this)
+            ViewTaskManager.getInstance().startView(selectPointView, true)
         }
     }
 

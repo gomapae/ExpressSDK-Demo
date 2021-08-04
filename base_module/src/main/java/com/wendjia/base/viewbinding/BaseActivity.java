@@ -43,37 +43,10 @@ public abstract class BaseActivity<T extends ViewDataBinding, M extends BaseView
         model = getModel();
     }
 
-    public void hideFragment(FragmentTransaction transaction, Fragment fragment){
-        if (fragment != null && fragment.isAdded()){
-            transaction.hide(fragment);
-        }
-    }
-    public void showFragment(FragmentTransaction transaction, Fragment fragment, Bundle bundle,@IdRes int id){
-        if (fragment == null){
-            return;
-        }
-        if (fragment.isAdded()){
-            transaction.show(fragment);
-        }else {
-            if (bundle != null){
-                fragment.setArguments(bundle);
-            }
-            transaction.add(id,fragment);
-        }
-    }
-
     protected abstract T getBinding();
 
     protected abstract M getModel();
 
-    private static void setAndroidNativeLightStatusBar(Activity activity, boolean dark) {
-        View decor = activity.getWindow().getDecorView();
-        if (dark) {
-            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        } else {
-            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-        }
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

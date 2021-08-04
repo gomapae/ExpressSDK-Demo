@@ -8,7 +8,6 @@ import androidx.core.view.contains
 import androidx.core.view.isEmpty
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.gomap.base.viewtask.IView
 import com.wendjia.base.view.BaseAppCompatActivity
 import com.wendjia.base.view.IBaseView
 import com.wendjia.base.viewbinding.BaseMVVMView
@@ -20,7 +19,7 @@ import kotlin.collections.HashMap
  * @author shenfei.wang@g42.ai
  * @createtime 2021/1/20 15:02
  */
-class ViewTaskManager(var iBaseView: IBaseView,private var container: ViewGroup, private var callBack: ViewTaskManagerCallBack?) {
+class ViewTaskManager(var iBaseView: IBaseView, private var container: ViewGroup, private var callBack: ViewTaskManagerCallBack?) {
     private val viewTask = Stack<IView>()
     private var context: Context? = null
 
@@ -34,14 +33,14 @@ class ViewTaskManager(var iBaseView: IBaseView,private var container: ViewGroup,
         private var viewTaskManagerMap = HashMap<String,ViewTaskManager>()
 
         @JvmStatic
-        fun init(iBaseView: IBaseView,view: ViewGroup, callBack: ViewTaskManagerCallBack?) {
+        fun init(iBaseView: IBaseView, view: ViewGroup, callBack: ViewTaskManagerCallBack?) {
             val simpleName = (view.context as BaseAppCompatActivity).javaClass.simpleName
             LogUtils.iTag("ViewTaskManager" ,simpleName)
             if (!viewTaskManagerMap.containsKey(simpleName)){
                 initViewTaskManager(iBaseView,view,callBack)
             }
         }
-        private fun initViewTaskManager(iBaseView: IBaseView,view: ViewGroup, callBack: ViewTaskManagerCallBack?) =  synchronized(this) {
+        private fun initViewTaskManager(iBaseView: IBaseView, view: ViewGroup, callBack: ViewTaskManagerCallBack?) =  synchronized(this) {
             ViewTaskManager(iBaseView,view,callBack).also {
                 val simpleName = (view.context as BaseAppCompatActivity).javaClass.simpleName
                 LogUtils.iTag("ViewTaskManager" ,simpleName)
@@ -74,7 +73,7 @@ class ViewTaskManager(var iBaseView: IBaseView,private var container: ViewGroup,
      * @param view
      * @param isNeedSelectPointFromMap 是否需要显示地图
      */
-    fun startView(view: IView?,isNeedSelectPointFromMap: Boolean){
+    fun startView(view: IView?, isNeedSelectPointFromMap: Boolean){
         startView(view,isNeedSelectPointFromMap,false)
     }
 
@@ -83,7 +82,7 @@ class ViewTaskManager(var iBaseView: IBaseView,private var container: ViewGroup,
      * @param isNeedSelectPointFromMap 是否需要显示地图
      * @param isNavigationIn 是否进入导航页面
      */
-    fun startView(view: IView?,isNeedSelectPointFromMap: Boolean,isNavigationIn:Boolean){
+    fun startView(view: IView?, isNeedSelectPointFromMap: Boolean, isNavigationIn:Boolean){
         //首次记录当前tabposition  待优化
         if (viewTask.size == 0){
             tabPosition = callBack?.getCurrentTabPosition()?:0
@@ -238,7 +237,7 @@ class ViewTaskManager(var iBaseView: IBaseView,private var container: ViewGroup,
      * 显示 view
      * @param isAnimation 是否动画打开
      */
-    private fun visibilityView(iView: IView,isAnimation: Boolean) {
+    private fun visibilityView(iView: IView, isAnimation: Boolean) {
         val view = iView as View
         container.addView(
                 view,

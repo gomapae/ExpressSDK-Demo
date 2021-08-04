@@ -61,8 +61,4 @@ dependencies {
     annotationProcessor  "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompiler"
     kapt "com.alibaba:arouter-compiler:$rootProject.ext.arouterCompiler"
 
-    implementation project(path: ':viewrouter-compiler')
-    annotationProcessor project(path: ':viewrouter-compiler')
-    kapt project(path: ':viewrouter-compiler')
-
 }

@@ -1,26 +1,20 @@
 package com.gomap.tangram_map.utils
 
-import android.graphics.Bitmap
 import android.graphics.PointF
 import android.graphics.drawable.Drawable
-import com.blankj.utilcode.util.ConvertUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
 import com.gomap.tangram_map.R
-import com.gomap.tangram_map.model.LngLatBounds
 import com.gomap.tangram_map.view.BaseMapListener
 import com.mapzen.android.graphics.GoMap
 import com.mapzen.android.graphics.model.BitmapMarker
 import com.mapzen.android.graphics.model.BitmapMarkerOptions
-import com.mapzen.android.listener.TouchPanListener
-import com.mapzen.tangram.ILnglat
 import com.mapzen.tangram.LngLat
 import com.mapzen.tangram.LngLat4Category
 import com.mapzen.tangram.Marker
 import com.mapzen.tangram.TouchInput.*
 import com.wendjia.base.BaseApplication
 import com.wendjia.base.bean.LocationBean
-import kotlin.math.abs
 
 
 /**
@@ -159,7 +153,7 @@ class MapProxy(private var map: GoMap?) : BaseProxy(map) {
      * 获取屏幕xy 坐标 对应的点坐标
      */
     fun getScreenPointLngLat(x:Float,y:Float): LocationBean? {
-        var locationBean =LocationBean()
+        var locationBean = LocationBean()
         val screenPositionToLngLat = map?.screenPositionToLngLat(PointF(x, y))
         locationBean.lat = screenPositionToLngLat?.latitude?:0.0
         locationBean.lng = screenPositionToLngLat?.longitude?:0.0
@@ -214,7 +208,7 @@ class MapProxy(private var map: GoMap?) : BaseProxy(map) {
         return map?.addMarker(LngLat4Category(searchBean.lng?:0.0, searchBean.lat?:0.0))
     }
 
-    fun addBitmapMarker(searchBean: LocationBean,drawable: Drawable):BitmapMarker?{
+    fun addBitmapMarker(searchBean: LocationBean, drawable: Drawable):BitmapMarker?{
         val bitmapMarkerOptions =
             BitmapMarkerOptions().position(LngLat(searchBean.lng ?: 0.0, searchBean.lat ?: 0.0))
                 .icon(drawable)

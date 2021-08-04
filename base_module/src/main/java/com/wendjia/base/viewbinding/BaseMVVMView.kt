@@ -12,8 +12,7 @@ import androidx.lifecycle.ViewModelStoreOwner
 import androidx.viewbinding.ViewBinding
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.LogUtils
-import com.gomap.base.viewtask.IView
-import com.viewrouter.api.ViewRouter
+import com.wendjia.base.viewtask.IView
 import com.wendjia.base.utils.AnimUtil
 import com.wendjia.base.view.IBaseView
 import com.wendjia.base.viewtask.ViewListener
@@ -25,7 +24,7 @@ import com.wendjia.base.viewtask.ViewListener
  */
 const val TAG_VIEW_LIFECYCLE = "view lifecycle"
 abstract class BaseMVVMView<T : ViewBinding, M : BaseViewModel>(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int? = -1) :
-        ConstraintLayout(context, attrs, defStyleAttr ?: -1), IView,IBaseView {
+        ConstraintLayout(context, attrs, defStyleAttr ?: -1), IView, IBaseView {
 
 
     constructor(context: Context?):this(context,null,-1)
@@ -45,7 +44,6 @@ abstract class BaseMVVMView<T : ViewBinding, M : BaseViewModel>(context: Context
     }
 
     override fun setBundleData(bundle: Bundle) {
-        ViewRouter.bind(this, bundle)
     }
 
     override fun onReStart() {

@@ -3,12 +3,7 @@ package com.gomap.tangram_map.utils
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.location.Location
-import com.alibaba.android.arouter.launcher.ARouter
-import com.blankj.utilcode.util.ConvertUtils
 import com.blankj.utilcode.util.LogUtils
-import com.blankj.utilcode.util.SPUtils
-import com.blankj.utilcode.util.ScreenUtils
-import com.gomap.tangram_map.model.LngLatBounds
 import com.mapzen.android.graphics.GoMap
 import com.mapzen.android.graphics.MapFragment2
 import com.mapzen.android.graphics.model.BitmapMarker
@@ -17,8 +12,6 @@ import com.mapzen.tangram.Marker
 import com.mapzen.tangram.SceneUpdate
 import com.wendjia.base.bean.LocationBean
 import com.wendjia.base.bean.SearchBean
-import com.wendjia.base.constants.Constant
-import com.wendjia.base.utils.JsonUtils
 
 /**
  * @author lxm

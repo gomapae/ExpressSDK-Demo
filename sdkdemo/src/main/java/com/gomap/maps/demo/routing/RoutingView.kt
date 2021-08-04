@@ -6,9 +6,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.blankj.utilcode.util.ToastUtils
 import com.gomap.maps.demo.databinding.RoutingViewBinding
 import com.gomap.maps.demo.map.GoMapUtils
+import com.gomap.maps.demo.selectpoint.SelectPointView
 import com.gomap.tangram_map.model.NaviRouteInfo
-import com.viewrouter.annotation.ViewRoute
-import com.viewrouter.api.ViewRouter
 import com.wendjia.base.bean.SearchBean
 import com.wendjia.base.utils.JsonUtils
 import com.wendjia.base.view.IBaseView
@@ -20,7 +19,6 @@ import com.wendjia.base.viewtask.ViewTaskManager
  * @author lxm
  * @createtime 2021/8/2
  */
-@ViewRoute(path = "RoutingView",group = "sdkdemo")
 class RoutingView(var iBaseViewOwner: IBaseView): BaseMVVMView<RoutingViewBinding, BaseViewModel>(iBaseViewOwner.getContext()),
     RoutingViewListener {
 
@@ -57,9 +55,7 @@ class RoutingView(var iBaseViewOwner: IBaseView): BaseMVVMView<RoutingViewBindin
     override fun selectPoint() {
         selectStartPoint = true
 
-        val navigation = ViewRouter.buildPath(iBaseViewOwner, "SelectPointView")
-            ?.navigation()
-        ViewTaskManager.getInstance().startView(navigation,true)
+        ViewTaskManager.getInstance().startView(SelectPointView(iBaseViewOwner),true)
 
     }
 
@@ -95,10 +91,7 @@ class RoutingView(var iBaseViewOwner: IBaseView): BaseMVVMView<RoutingViewBindin
 
     override fun addStopPoint() {
         selectStartPoint = false
-        val navigation = ViewRouter.buildPath(iBaseViewOwner, "SelectPointView")
-            ?.navigation()
-        ViewTaskManager.getInstance().startView(navigation,true)
-
+        ViewTaskManager.getInstance().startView(SelectPointView(iBaseViewOwner),true)
     }
 
     override fun startRouting() {

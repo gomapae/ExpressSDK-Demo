@@ -8,22 +8,16 @@ import android.os.Build
 import android.os.Bundle
 import android.view.*
 import android.view.inputmethod.InputMethodManager
-import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelStoreOwner
 import com.alibaba.android.arouter.launcher.ARouter
-import com.wendjia.base.R
-import com.wendjia.base.utils.AdjustLayoutSize
-import com.wendjia.base.utils.StatusBarUtils
-import com.wendjia.base.widgets.StatusBarCompatRootLayout
 
 /**
  * Create by lxm
  * 2020/8/24
  */
-abstract class BaseAppCompatActivity : RxActivity(), IBaseView {
-
-    private var mStatusBarCompatRootLayout: StatusBarCompatRootLayout? = null
+abstract class BaseAppCompatActivity : AppCompatActivity(), IBaseView {
 
     /**
      * 主题编号
@@ -71,12 +65,7 @@ abstract class BaseAppCompatActivity : RxActivity(), IBaseView {
     }
 
     private fun setContentView(){
-        if (useCustomStatusBar()) {
-            setContentViewWithCustomStatusBar(getLayoutView())
-        } else {
-            super.setContentView(getLayoutView())
-        }
-        setDefaultSystemStatusBarStatus()
+        super.setContentView(getLayoutView())
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
     }
 
@@ -103,61 +92,9 @@ abstract class BaseAppCompatActivity : RxActivity(), IBaseView {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN)//remove notification bar  即全屏
     }
-    private var assistActivity: AdjustLayoutSize ?= null
-    /**
-     * 设置是否需要占位的statusBar
-     *
-     * @param layoutResId 渲染的layoutId
-     */
-    private fun setContentViewWithCustomStatusBar( layoutView: View) {
-        mStatusBarCompatRootLayout = StatusBarCompatRootLayout(this)
-        mStatusBarCompatRootLayout?.showStatusBar(true)
-        mStatusBarCompatRootLayout?.setStatusBarViewBg(resources.getColor(R.color.light_transparent))
-
-        mStatusBarCompatRootLayout?.addView(layoutView, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
-        super.setContentView(mStatusBarCompatRootLayout)
-        assistActivity = AdjustLayoutSize.assistActivity(findViewById(android.R.id.content))
-    }
-    /**
-     * 设置默认的沉浸式为全透明
-     */
-    private fun setDefaultSystemStatusBarStatus() {
-        if (Build.VERSION.SDK_INT >= 21) {
-            val window = window
-            if (isUseStatusBar()){
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
-                        or WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
-            }
-            window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_LAYOUT_STABLE)
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.statusBarColor = Color.TRANSPARENT
-            window.navigationBarColor = Color.TRANSPARENT
-        } else {
-            mStatusBarCompatRootLayout?.showStatusBar(false)
-        }
-    }
-
-    protected open fun isUseStatusBar(): Boolean {
-        return true
-    }
-
-    // 更新statusBar的状态
-    open fun updateStatusBar() {
-        if (useCustomStatusBar() && isAlive()){
-            StatusBarUtils.updateStatusBar(this, StatusBarUtils.StatusBarColor.WHITE, true, false)
-        }
-    }
 
     override fun onResume() {
         super.onResume()
-        try {
-            if (mStatusBarCompatRootLayout != null){
-                updateStatusBar()
-            }
-        } catch (e: Exception) {
-        }
     }
 
     override fun showErrorMessage(message: String?) {
@@ -171,7 +108,6 @@ abstract class BaseAppCompatActivity : RxActivity(), IBaseView {
 
     override fun onDestroy() {
         super.onDestroy()
-        assistActivity?.onDestroy()
     }
 
     override fun isAlive(): Boolean = !isDestroyed && !isFinishing

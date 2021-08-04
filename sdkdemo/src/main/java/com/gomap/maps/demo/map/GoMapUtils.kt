@@ -2,17 +2,14 @@ package com.gomap.maps.demo.map
 
 import android.content.Context
 import android.location.Location
-import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.LogUtils
 import com.gomap.android.view.entrance.map.ExploreMapListener
 import com.wendjia.base.bean.SearchBean
-import com.gomap.tangram_map.model.LngLatBounds
 import com.gomap.tangram_map.model.NaviRouteInfo
 import com.gomap.tangram_map.utils.BaseGoMapUtils
 import com.gomap.tangram_map.view.BaseMapListener
 import com.mapzen.android.data.request.MapType
 import com.mapzen.android.graphics.MapFragment2
-import com.mapzen.android.listener.RouteInfoSaveListener
 import com.mapzen.android.rge.TravelData
 import com.mapzen.tangram.*
 import com.wendjia.base.bean.LocationBean

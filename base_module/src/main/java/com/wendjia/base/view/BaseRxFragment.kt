@@ -5,18 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelStoreOwner
 import com.alibaba.android.arouter.launcher.ARouter
-import com.blankj.utilcode.util.LogUtils
-import com.wendjia.base.utils.StatusBarUtils
 
 /**
  * Create by lxm
  * 2020/8/24
  */
-abstract class BaseRxFragment: RxFragment(), IBaseView {
+abstract class BaseRxFragment: Fragment(), IBaseView {
 
     private var context: Context ?= null
 
@@ -70,7 +69,6 @@ abstract class BaseRxFragment: RxFragment(), IBaseView {
             getContext()?.theme?.applyStyle(initTheme(), true)
         }
         val view = onDefineCreateView(inflater,container,savedInstanceState)
-        LogUtils.iTag(TAG_FRAGMENT_LIFECYCLE, javaClass.simpleName + " onCreateView")
         return view
     }
 
@@ -98,42 +96,14 @@ abstract class BaseRxFragment: RxFragment(), IBaseView {
     }
 
     override fun onResume() {
-        try {
-            super.onResume()
-            updateStatusBar()
-        } catch (e: Exception) {
-        }
+        super.onResume()
     }
 
     override fun onHiddenChanged(hidden: Boolean) {
         super.onHiddenChanged(hidden)
         this.hidden = hidden
-        if (!hidden) {
-            updateStatusBar()
-        } else {
-        }
-    }
-    // 更新statusBar的状态
-    open fun updateStatusBar() {
-        if (useCustomStatusBar() && openUseCustomStatusBar() && !hidden && isAlive()){
-            StatusBarUtils.updateStatusBar(activity, StatusBarUtils.StatusBarColor.WHITE, false, true)
-        }
     }
 
-    /**
-     * 去除fragment 中嵌套fragmnet =无法感知生命周期
-     */
-    protected open fun openUseCustomStatusBar(): Boolean {
-        return false
-    }
-
-    private fun useCustomStatusBar() : Boolean {
-        return if (activity is BaseAppCompatActivity){
-            (activity as BaseAppCompatActivity).useCustomStatusBar()
-        }else{
-            false
-        }
-    }
 
     protected open fun initTheme(): Int {
         return 0

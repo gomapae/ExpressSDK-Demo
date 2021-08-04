@@ -7,7 +7,6 @@ import androidx.annotation.DimenRes
 import com.blankj.utilcode.util.LogUtils
 import com.gomap.tangram_map.R
 import com.gomap.tangram_map.model.NaviRouteInfo
-import com.gomap.tangram_map.model.NavigationTypeBean
 import com.gomap.tangram_map.model.RoutingDetailData
 import com.gomap.tangram_map.view.BaseMapListener
 import com.mapzen.android.data.NavigationResult
@@ -19,7 +18,6 @@ import com.mapzen.tangram.LngLat
 import com.wendjia.base.BaseApplication
 import com.wendjia.base.bean.LocationBean
 import com.wendjia.base.utils.ThreadUtils
-import jni.ST_RgeResultInfo
 import jni.bean.*
 import jni.bean.RouteDetailInfo
 import kotlin.math.ceil

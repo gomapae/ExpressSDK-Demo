@@ -5,19 +5,14 @@ import android.view.LayoutInflater
 import androidx.lifecycle.ViewModelProvider
 import com.gomap.maps.demo.databinding.ViewSelectPointBinding
 import com.gomap.maps.demo.map.GoMapUtils
-import com.viewrouter.annotation.ViewRoute
-import com.viewrouter.annotation.ViewRouteParam
 import com.wendjia.base.bean.SearchBean
 import com.wendjia.base.bean.TagSiteSelectBean
 import com.wendjia.base.utils.JsonUtils
 import com.wendjia.base.view.IBaseView
 import com.wendjia.base.viewbinding.BaseMVVMView
 
-@ViewRoute(path = "SelectPointView",group = "app")
 class SelectPointView(var iBaseViewOwner: IBaseView) : BaseMVVMView<ViewSelectPointBinding, ViewSelectPointViewModel>(iBaseViewOwner.getContext()) {
 
-    @JvmField
-    @ViewRouteParam("support_long_select")
     var supportLongSelect:Boolean?=true
 
     override fun getBindingT(): ViewSelectPointBinding {

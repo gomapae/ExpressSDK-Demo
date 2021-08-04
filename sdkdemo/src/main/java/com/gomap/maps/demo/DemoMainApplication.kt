@@ -5,7 +5,6 @@ import android.text.TextUtils
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.Utils
 import com.mapzen.android.GoMapSDK
-import com.viewrouter.api.ViewRouter
 import com.wendjia.base.BaseApplication
 import java.io.BufferedReader
 import java.io.FileReader
@@ -23,7 +22,6 @@ class DemoMainApplication:BaseApplication() {
         if (processName != this.packageName) { //防止多进程导致初始化多次
             return
         }
-        ViewRouter.init(this)
         GoMapSDK.getInstance().init()
         ARouter.init(this)
 
