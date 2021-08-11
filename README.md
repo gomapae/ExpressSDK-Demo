@@ -9,7 +9,6 @@ buildscript {
     ext.kotlin_version = '1.3.72'
 
     repositories {
-       
         maven { url "https://developer.huawei.com/repo/" }
     }
    
@@ -184,8 +183,8 @@ fun removeBitmapMarker(bitmapMarker:BitmapMarker){
 （8）路线规划/导航
 
 ```fortran
-Gomap：
-/**
+   Gomap：
+    /**
      * plan route
      * @param merchant the location of merchant, necessary
      * @param dests the destinations, must more than one
